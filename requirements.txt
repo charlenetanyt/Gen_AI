@@ -1,0 +1,34 @@
+# Core
+python-dotenv
+pyyaml
+pandas
+
+# Database
+psycopg[binary]
+sqlalchemy
+
+# Data generation
+faker
+
+# Schema RAG
+sentence-transformers
+chromadb
+
+# Agent and MCP
+google-genai
+mcp
+
+# Guardrails and scoring
+sqlglot
+
+# Evaluation and analysis
+scipy
+statsmodels
+matplotlib
+jupyter
+
+# Testing
+pytest
+
+# Once stable, pin exact versions with:
+#   pip freeze > requirements.lock.txt

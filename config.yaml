@@ -1,0 +1,31 @@
+# All experiment settings live here. Each run saves a copy of this file with its results.
+
+seed: 42
+
+llm:
+  provider: gemini
+  model: gemini-3.8-flash      # pinned; do not change mid-experiment
+  thinking_level: low          # to confirm during development
+
+database:
+  schema_size: core            # core (13 tables) | medium (~25) | large (~50)
+
+schema:
+  mode: rag                    # full | rag
+  top_k: 5
+  embedding_model: BAAI/bge-small-en-v1.5   # to confirm
+
+agent:
+  mode: loop                   # single_shot | loop
+  max_attempts: 3
+
+guardrails:
+  enabled: true
+  row_limit: 1000
+  timeout_seconds: 5
+  require_approval_above_cost: null   # set once EXPLAIN costs are known
+
+eval:
+  split: dev                   # dev (20 questions) | test (70 questions)
+  runs_per_config: 3
+  output_dir: results/

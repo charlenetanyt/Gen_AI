@@ -1,0 +1,29 @@
+# Secrets
+.env
+
+# Data (downloaded, not committed)
+data/raw/*
+!data/raw/.gitkeep
+
+# Vector index and caches
+schema_rag/index/
+.chroma/
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Large experiment outputs (keep summaries, drop raw logs)
+results/raw/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
